@@ -1,0 +1,21 @@
+//Write a program to reverse the given string and count number of vowels in it
+
+import java.util.Scanner;
+
+Scanner in = new Scanner(System.in);
+System.out.println("Enter String");
+String abc = in.nextLine();
+int l = abc.length();
+String cba = new String[l];
+for (int i=0; i<l; i++){
+	cba[i] = abc[(l-1)-i];
+	}
+int count = 0;
+char n;
+for (int j=0; j<l; j++){
+	n = abc.charAt(j);
+	if ((n=='a')||(n=='e')||(n=='i')||(n=='o')||(n=='u'))
+		count++;
+	}
+System.out.println(cba);
+System.out.println(count);
