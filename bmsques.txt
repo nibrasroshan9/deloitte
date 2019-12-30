@@ -154,34 +154,3 @@
 
 
 
-21.Write a query which will display account number, account type, customer id, customer name, date of birth, guardian name, 
-contact no, mail id , gender, reference account holders name, reference account holders account number, registration date, 
-activation date, number of days between the registration date and activation date with alias name "NoofdaysforActivation", 
-bank name, branch name and initial deposit for all the customers.
-
-22."Write a query which will display customer id, customer name,  guardian name, identification doc type,
- reference account holders name, account type, ifsc code, bank name and current balance for the customers 
-who has only the savings account. 
-<br/>Hint:  Formula for calculating current balance is add the intital deposit amount and interest
- and display without any decimals. Use ""CURRENT_BALANCE"" as alias name."
-
-23."Write a query which will display the customer id, customer name, account number, account type, interest, initial deposit;
- <br/>check the initial deposit,<br/> if initial deposit is 20000 then display ""high"",<br/> if initial deposit is 16000 display 'moderate'
-,<br/> if initial deposit is 10000 display 'average', <br/>if initial deposit is 5000 display 'low', <br/>if initial deposit is 0 display
- 'very low' otherwise display 'invalid' and sort by interest in descending order.<br/>
-Hint: Name the column as ""Deposit_Status"" (alias). 
-<br/>Strictly follow the lower case for strings in this query."
-
-24."Write a query which will display customer id, customer name,  account number, account type, bank name, ifsc code, initial deposit amount
- and new interest amount for the customers whose name starts with ""J"". 
-<br/> Hint:  Formula for calculating ""new interest amount"" is 
-if customers account type is savings then add 10 % on current interest amount to interest amount else display the current interest amount.
- Round the new interest amount to 2 decimals.<br/> Use ""NEW_INTEREST"" as alias name for displaying the new interest amount.
-
-<br/>Example, Assume Jack has savings account and his current interest amount is 10.00, then the new interest amount is 11.00 i.e (10 + (10 * 10/100)). 
-"
-
-25.Write query to display the customer id, customer name, account no, initial deposit, tax percentage as calculated below.
-<BR>Hint: <BR>If initial deposit = 0 then tax is '0%'<BR>If initial deposit &lt;= 10000 then tax is '3%' 
-<BR>If initial deposit &gt; 10000 and initial deposit &lt; 20000 then tax is '5%' <BR>If initial deposit &gt;= 20000 and
- initial deposit&lt;=30000 then tax is '7%' <BR>If initial deposit &gt; 30000 then tax is '10%' <BR>Use the alias name 'taxPercentage'
