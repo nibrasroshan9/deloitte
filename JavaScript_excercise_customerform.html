@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Customer Form</title>
+<script type="text/javascript">
+function validate(){
+	var id = document.getElementById("customerId").value;
+	var name = document.getElementById("customerName").value;
+	var addr = document.getElementById("customerAddress").value;
+	var bill = document.getElementById("billAmount").value;
+	var myid = document.getElementById("spanid")
+	var myname = document.getElementById("spanname")
+	var myaddress = document.getElementById("spanaddress")
+	var mybill = document.getElementById("spanbill")
+	
+	if(id.length==5){
+		myid.innerHTML = " ";
+		if(name.length!=0){
+			myname.innerHTML = " ";
+			if(addr=="Mumbai"||addr=="Delhi"||addr=="Pune"){
+				myaddress.innerHTML = " ";
+				if(bill>0){
+					mybill.innerHTML = " ";
+					printDetails()
+				}
+				else
+					mybill.innerHTML = "<font color=red>Please enter a valid Bill amount"
+			}
+			else
+				myaddress.innerHTML = "<font color=red>Please select an address in Mumbai, Delhi or Pune</font>"
+		}
+		else
+			myname.innerHTML = "<font color=red>Please enter your name</font>"
+	}
+	else
+		myid.innerHTML = "<font color=red>Please enter the 5 digit Customer ID</font>"
+
+}
+function printDetails(){
+	var id = document.getElementById("customerId").value;
+	var name = document.getElementById("customerName").value;
+	var addr = document.getElementById("customerAddress").value;
+	var bill = document.getElementById("billAmount").value;
+	
+	var cong = document.getElementById("d0");
+	var res = document.getElementById("da0")
+	var printid = document.getElementById("d1");
+	var printname = document.getElementById("d2");
+	var printaddress = document.getElementById("d3");
+	var printbill = document.getElementById("d4");
+	
+	cong.innerHTML = "<h2>Congrats, Your customer saved successfully</h2>";
+	res.innerHTML = "<h3>Your customer details are ;</h3>";
+	printid.innerHTML = "<h4>Customer ID : "+id+"</h4>";
+	printname.innerHTML = "<h4>Customer Name : "+name+"</h4>";
+	printaddress.innerHTML = "<h4>Customer Address : "+addr+"</h4>";
+	printbill.innerHTML = "<h4>Bill Amount : "+bill+"</h4>";
+}
+</script>
+</head>
+<body>
+	<form>
+		<h1 align="center">Customer Form</h1>
+		<table border=2 cellspacing="10" cellpadding="10" align="center">
+		<tr><td>
+		Customer ID:</td><td> <input type="text" name="customerId" id="customerId">
+		</td><td><span id="spanid"></span></td></tr>
+		<tr><td>
+		Customer Name:</td><td> <input type="text" name ="customerName" id="customerName">
+		</td><td><span id="spanname"></span></td></tr>
+		<tr><td>
+		Customer Address:</td><td> <input type="text" name ="customerAddress" id="customerAddress">
+		</td><td><span id="spanaddress"></span></td></tr>
+		<tr><td>
+		Customer Bill Amount:</td><td> <input type="text" name ="billAmount" id="billAmount">
+		</td><td><span id="spanbill"></span></td></tr>
+		<tr><td  align="center">
+		<input type="button" value="Check" onclick="validate()">
+		<input type="reset" value="Clear">
+		</td>
+		<td><input type="submit" value="Submit">
+		</td></tr>
+</table>
+	</form>
+	<div id="d0"></div>
+	<div id="da0"></div>
+	<div id="d1"></div>
+	<div id="d2"></div>
+	<div id="d3"></div>
+	<div id="d4"></div>
+
+</body>
+</html>
