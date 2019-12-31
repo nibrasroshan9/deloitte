@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function gen(){
+	var ran = Math.random();
+	var res = Math.round(10*ran);
+	document.getElementById("rand").innerHTML = "<h1 align='center'><b><font color=white>"+res+"</font></b></h1>"
+}
+</script>
+</head>
+<body> 
+<table  align='center' bgcolor="cyan">
+<tr><td><input type="button" value="Generate" id="Generate" onclick="gen()"></td></tr>
+<tr><td><span id="rand"></span></td></tr>
+</table>
+
+</body>
+</html>
